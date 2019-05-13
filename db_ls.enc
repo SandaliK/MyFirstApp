@@ -1,0 +1,72 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: May 13, 2019 at 03:45 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_ls`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `borrowedbooks`
+--
+
+CREATE TABLE `borrowedbooks` (
+  `memberName` varchar(212) NOT NULL,
+  `bookName` varchar(122) NOT NULL,
+  `issuedDate` varchar(122) NOT NULL,
+  `returnedDate` varchar(122) NOT NULL,
+  `remarks` varchar(122) NOT NULL,
+  `borrowedBookId` int(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `borrowedbooks`
+--
+
+INSERT INTO `borrowedbooks` (`memberName`, `bookName`, `issuedDate`, `returnedDate`, `remarks`, `borrowedBookId`) VALUES
+('asd', 'dsd', 'sdas', 'dasd', 'sad', 1),
+('qwe', 'qew', 'wqe', 'qwe', 'qweqw', 24),
+('', '', '', '', '', 26);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `borrowedbooks`
+--
+ALTER TABLE `borrowedbooks`
+  ADD PRIMARY KEY (`borrowedBookId`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `borrowedbooks`
+--
+ALTER TABLE `borrowedbooks`
+  MODIFY `borrowedBookId` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
